@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LatestBlog from '@/components/LatestBlog'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -23,13 +24,13 @@ export default function Home() {
             <span className="font-bold text-purple-200">AI/ML</span>, and{' '}
             <span className="font-bold text-yellow-200">Data Insights</span>
           </p>
-          <a
+          <Link
             href="/blogs"
             className="inline-block relative font-bold px-10 py-4 rounded-full shadow-xl text-lg bg-gradient-to-r from-purple-600 via-pink-500 to-blue-500 hover:from-purple-700 hover:to-blue-600 transition-all duration-200 border-2 border-transparent hover:border-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-400/40 animate-bounce"
             style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)' }}
           >
             <span className="bg-white/10 px-6 py-2 rounded-full backdrop-blur-md">Explore Blogs</span>
-          </a>
+          </Link>
         </div>
         {/* Decorative SVG Wave */}
         <svg className="absolute bottom-0 left-0 w-full" height="80" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">

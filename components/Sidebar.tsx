@@ -1,3 +1,4 @@
+import Image from "next/image"
 interface Props {
   categories: string[]
   selected: string
@@ -9,10 +10,12 @@ export default function Sidebar({ categories, selected, onSelect }: Props) {
     <aside className="rounded-2xl bg-white/5 backdrop-blur-md shadow-xl border border-purple-900/20 p-6 flex flex-col items-center">
       <div className="flex flex-col items-center justify-center mb-6">
         <div className=" p-1 rounded-full mb-2 shadow-lg">
-          <img
+          <Image
             src="/Logo.png"
             alt="Logo"
-            className="h-10 w-48 rounded-full hover:scale-110 transition-transform duration-200 shadow"
+            width={120}
+            height={40}
+            className="h-10 w-28 rounded-full hover:scale-110 transition-transform duration-200 shadow object-contain"
           />
         </div>
         

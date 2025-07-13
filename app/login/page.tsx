@@ -54,7 +54,7 @@ export default function LoginPage() {
           </svg>
         </Link>
         <div className="p-1 rounded-full mb-4 shadow-lg">
-          <img src="/Logo.png" alt="Logo" className="h-10 w-45 rounded-full " />
+          <Image src="/Logo.png" alt="Logo" className="h-10 w-45 rounded-full " />
         </div>
         <h2 className="text-3xl font-extrabold mb-7 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-center drop-shadow-lg"><span className='text-white'>🔐</span> Login</h2>
 
@@ -94,9 +94,9 @@ export default function LoginPage() {
           <FcGoogle size={24} /> Sign in with Google
         </button>
         <p className="text-right text-sm text-gray-400 mt-2 w-full">
-          <a href="/forgot-password" className="hover:underline text-purple-400 font-semibold">
+          <Link href="/forgot-password" className="hover:underline text-purple-400 font-semibold">
             Forgot Password?
-          </a>
+          </Link>
         </p>
 
         <p className="text-center text-gray-500 text-sm mt-6">

@@ -7,6 +7,7 @@ import { collection, getDocs, query, where, deleteDoc, doc } from 'firebase/fire
 import { db } from '@/lib/firebase'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function ProfilePage() {
   const { user, profile, logout } = useAuth()
@@ -72,9 +73,9 @@ export default function ProfilePage() {
             {myBlogs.map((blog) => (
               <li key={blog.id} className="bg-white/5 backdrop-blur-md border border-purple-900/20 rounded-xl p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3 shadow hover:scale-[1.02] transition-transform duration-200">
                 <div className="flex-1 flex flex-col md:flex-row md:items-center gap-2">
-                  <a href={`/blogs/${blog.id}`} className="text-purple-300 font-semibold hover:underline text-lg">
+                  <Link href={`/blogs/${blog.id}`} className="text-purple-300 font-semibold hover:underline text-lg">
                     {blog.title}
-                  </a>
+                  </Link>
                   <span className="text-xs text-gray-400">{blog.createdAt?.toDate?.().toDateString?.() || ''}</span>
                 </div>
                 <button

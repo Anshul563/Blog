@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useAuth } from '@/lib/authContext';
 import { useState } from 'react';
 import { Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const { user, profile, logout } = useAuth();
@@ -13,7 +14,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between w-full">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <img src="/Logo.png" alt="Logo" className="h-10 w-auto hover:scale-110 transition-transform duration-200 drop-shadow-lg" />
+          <Image src="/Logo.png" alt="Logo" width={40} height={40} className="h-10 w-auto hover:scale-110 transition-transform duration-200 drop-shadow-lg object-contain" />
         </Link>
 
         {/* Desktop Navigation - Centered */}

@@ -67,7 +67,7 @@ export default function BlogDetailPage({ params }: { params: Promise<{ id: strin
           {/* Blog Image */}
           {blog.imageUrl && (
             <div className="w-full max-w-2xl bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-xl mb-8 overflow-hidden flex items-center justify-center h-64 shadow-lg border border-purple-900/30">
-              <img
+              <Image
                 src={blog.imageUrl}
                 alt={blog.title}
                 className="object-contain max-h-full max-w-full transition-transform duration-300 hover:scale-105"

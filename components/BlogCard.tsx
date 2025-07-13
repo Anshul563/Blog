@@ -1,4 +1,6 @@
+
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function BlogCard({ blog }: { blog: any }) {
   return (
@@ -7,7 +9,7 @@ export default function BlogCard({ blog }: { blog: any }) {
         {/* Image */}
         {blog.imageUrl && (
           <div className="w-full h-56 bg-[#170826] flex items-center justify-center overflow-hidden relative">
-            <img
+            <Image
               src={blog.imageUrl}
               alt={blog.title}
               className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"

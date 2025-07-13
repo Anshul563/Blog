@@ -14,6 +14,7 @@ import { toast } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 import { FcGoogle } from 'react-icons/fc'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function RegisterPage() {
   const [fullName, setFullName] = useState('')
@@ -94,7 +95,7 @@ export default function RegisterPage() {
           </svg>
         </Link>
         <div className=" p-1 rounded-full mb-4 ">
-          <img src="/Logo.png" alt="Logo" className="h-10 w-45 rounded-full " />
+          <Image src="/Logo.png" alt="Logo" className="h-10 w-45 rounded-full " />
         </div>
         <h2 className="text-3xl font-extrabold mb-7 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-center drop-shadow-lg"><span className='text-white'>📝</span> Register</h2>
 

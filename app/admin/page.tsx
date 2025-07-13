@@ -4,6 +4,7 @@ import { useAuth } from '@/lib/authContext'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import { ClipboardList, Users, BarChart3 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function AdminPage() {
   const { user, profile } = useAuth()
@@ -22,13 +23,13 @@ export default function AdminPage() {
 
       {/* Go to Homepage Button */}
       <div className="fixed top-6 right-6 z-50">
-        <a
+        <Link
           href="/"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white px-6 py-2.5 rounded-full shadow-lg border border-blue-400/40 hover:from-blue-700 hover:to-pink-600 transition-all font-bold text-base backdrop-blur-md"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h3m10-11v11a1 1 0 01-1 1h-3m-6 0h6" /></svg>
           {/* Go to Homepage */}
-        </a>
+        </Link>
       </div>
 
       <header className="mb-14 flex flex-col items-center z-10">
@@ -42,7 +43,7 @@ export default function AdminPage() {
       <div className="flex justify-center w-full z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl justify-items-center">
           {/* Card: Manage Users */}
-          <a
+          <Link
             href="/admin/users"
             className="group bg-white/5 backdrop-blur-md border-2 border-purple-700/30 rounded-3xl p-10 shadow-2xl hover:shadow-3xl hover:scale-[1.04] transition-all duration-200 relative overflow-hidden before:absolute before:inset-0 before:rounded-3xl before:border-2 before:border-gradient-to-br before:from-purple-400/60 before:to-pink-400/60 before:opacity-0 group-hover:before:opacity-100 before:transition-all before:duration-300 w-full max-w-xs"
           >
@@ -54,10 +55,10 @@ export default function AdminPage() {
             </div>
             <p className="text-gray-400 group-hover:text-gray-200 transition">Ban/unban users or change their roles.</p>
             <div className="absolute right-6 bottom-6 opacity-10 text-8xl pointer-events-none select-none animate-float">👥</div>
-          </a>
+          </Link>
 
           {/* Card: Blog Analytics */}
-          <a
+          <Link
             href="/admin/analytics"
             className="group bg-white/5 backdrop-blur-md border-2 border-blue-700/30 rounded-3xl p-10 shadow-2xl hover:shadow-3xl hover:scale-[1.04] transition-all duration-200 relative overflow-hidden before:absolute before:inset-0 before:rounded-3xl before:border-2 before:border-gradient-to-br before:from-blue-400/60 before:to-purple-400/60 before:opacity-0 group-hover:before:opacity-100 before:transition-all before:duration-300 w-full max-w-xs"
           >
@@ -69,7 +70,7 @@ export default function AdminPage() {
             </div>
             <p className="text-gray-400 group-hover:text-gray-200 transition">Track blog views, performance, and statistics.</p>
             <div className="absolute right-6 bottom-6 opacity-10 text-8xl pointer-events-none select-none animate-float">📊</div>
-          </a>
+          </Link>
         </div>
       </div>
 
